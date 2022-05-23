@@ -1,0 +1,33 @@
+from asyncio.windows_events import NULL
+
+
+Tempnum = float(input("Ingrese una cantidad de temperatura: "))
+
+print("Para grado kelvin: k")
+print("Para grado celcius: c")
+print("Para grado fahrenheit: f")
+
+TempType = (input("ingrese una letra de tipo de temperatura: "))
+
+def TempCalc(Tempnum, TempType):
+    if (TempType == "k"):
+        K = Tempnum
+        C = Tempnum - 273.15
+        F = ((Tempnum - 273.15) * 9 / 5) + 32
+        return K, C, F
+        
+    elif (TempType == "c"):
+        K = Tempnum + 273.15
+        C = Tempnum
+        F = Tempnum * (9/5) + 32
+        return K, C, F
+        
+    elif (TempType == "f"):
+        K = ((Tempnum - 32) * 5 / 9) + 273.15
+        C = (Tempnum - 32) * 5 / 9
+        F = Tempnum
+        return K, C, F
+        
+    else:
+        return NULL
+TempCalc(Tempnum, TempType)

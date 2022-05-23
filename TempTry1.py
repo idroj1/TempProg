@@ -7,7 +7,7 @@ def Temp_changer(Temp_K):
     cel = Temp_K - 273.15
     C = print(cel, "ºC")
     
-    far = ((Temp_K - 273.15) * 5 / 9) + 32
+    far = ((Temp_K - 273.15) * 9 / 5) + 32
     F = print(far, "ºF")
     return print(K, C, F)
 
