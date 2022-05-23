@@ -9,6 +9,6 @@ def Temp_changer(Temp_K):
     
     far = ((Temp_K - 273.15) * 9 / 5) + 32
     F = print(far, "ºF")
-    return print(K, C, F)
+    return K, C, F
 
 print(Temp_changer(Temp_K))

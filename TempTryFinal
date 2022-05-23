@@ -1,5 +1,3 @@
-from asyncio.windows_events import NULL
-
 
 Tempnum = float(input("Ingrese una cantidad de temperatura: "))
 
@@ -29,5 +27,7 @@ def TempCalc(Tempnum, TempType):
         return K, C, F
         
     else:
-        return NULL
+        return print("error")
 TempCalc(Tempnum, TempType)
+
+import unittest
