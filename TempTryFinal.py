@@ -1,41 +1,37 @@
 
-Tempn= float(input("Ingrese una cantidad de temperatura: "))
-
-print("Para grado kelvin: k")
-print("Para grado celcius: c")
-print("Para grado fahrenheit: f")
-
-TempT = (input("ingrese una letra de tipo de temperatura: "))
-
 def TempC(Tempn, TempT):
     if (TempT == "k"):
-        K = Tempn
-        C = Tempn - 273.15
-        F = ((Tempn - 273.15) * 9 / 5) + 32
+        K = float(Tempn)
+        C = float(Tempn) - 273.15
+        F = ((float(Tempn) - 273.15) * 9 / 5) + 32
         return K, C, F
         
     elif (TempT == "c"):
-        K = Tempn + 273.15
-        C = Tempn
-        F = Tempn * (9/5) + 32
+        K = float(Tempn) + 273.15
+        C = float(Tempn)
+        F = float(Tempn) * (9/5) + 32
         return K, C, F
         
     elif (TempT == "f"):
-        K = ((Tempn - 32) * 5 / 9) + 273.15
-        C = (Tempn - 32) * 5 / 9
-        F = Tempn
+        K = ((float(Tempn) - 32) * 5 / 9) + 273.15
+        C = (float(Tempn) - 32) * 5 / 9
+        F = float(Tempn)
         return K, C, F
         
     else:
         return print("error")
 
 
+from mmap import ALLOCATIONGRANULARITY
 import unittest
+from TempTryFinal import TempC
 
 class TTF_test(unittest.TestCase):
     
     def TTF_t1(self):
-        self.assertEqual(TempC(320, "k"), (320, 46.85, 116.33))
+        Actual = TempC(320, "k")
+        Expected = (320, 46.85, 116.33)
+        self.assertEqual(Actual , Expected)
 
 if __name__ == '__main__':
     unittest.main()
