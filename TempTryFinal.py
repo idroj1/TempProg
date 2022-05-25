@@ -31,17 +31,17 @@ class TTF_test(unittest.TestCase):
     def TTF_t1(self):
         Actual = TempC(320, "k")
         Expected = (K, C, F) = (320, 46.85, 116.33)
-        self.assertAlmostEqual(Actual , Expected)
+        self.assertEqual(Actual , Expected)
         
     def TTF_t2(self):
         Actual = TempC(49, "f")
         Expected = (K, C, F) = (282.594, 9.44444, 49)
-        self.assertAlmostEqual(Actual , Expected)
+        self.assertEqual(Actual , Expected)
     
     def TTF_t3(self):
         Actual = TempC(19, "c")
         Expected = (K, C, F) = (292.15, 19, 66.2)
-        self.assertAlmostEqual(Actual , Expected)
+        self.assertEqual(Actual , Expected)
 
 if __name__ == '__main__':
     unittest.main()
