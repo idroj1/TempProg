@@ -22,7 +22,7 @@ def TempC(Tempn, TempT):
         return print("error")
 
 
-from mmap import ALLOCATIONGRANULARITY
+
 import unittest
 from TempTryFinal import TempC
 
